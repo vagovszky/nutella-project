@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c68c6b571787cbbdbf521f54d12c16d3",
+    "content-hash": "9a4c25f0d2ba9e54ce678ae08648ae24",
     "packages": [
         {
             "name": "contributte/application",
@@ -2979,12 +2979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "206edb73814871d2b22cf3c59495e3fb5453bbfe"
+                "reference": "ec3633f01989c1ab42bd6502f76035ae5bf8c0c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/206edb73814871d2b22cf3c59495e3fb5453bbfe",
-                "reference": "206edb73814871d2b22cf3c59495e3fb5453bbfe",
+                "url": "https://api.github.com/repos/nette/forms/zipball/ec3633f01989c1ab42bd6502f76035ae5bf8c0c0",
+                "reference": "ec3633f01989c1ab42bd6502f76035ae5bf8c0c0",
                 "shasum": ""
             },
             "require": {
@@ -3041,7 +3041,7 @@
                 "nette",
                 "validation"
             ],
-            "time": "2020-06-06T15:13:38+00:00"
+            "time": "2020-06-06T13:38:25+00:00"
         },
         {
             "name": "nette/http",
@@ -7056,7 +7056,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3"
+        "php": ">=7.3"
     },
     "platform-dev": [],
     "platform-overrides": {
