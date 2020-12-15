@@ -40,7 +40,9 @@
 		"nettrine/dbal": "^0.6.2",
 		"nettrine/cache": "^0.1.0",
 		"nettrine/migrations": "^0.7.0",
-		"nettrine/fixtures": "^0.5.1"
+		"nettrine/fixtures": "^0.5.1",
+		"ublaboo/datagrid": "^6.5",
+		"contributte/translation": "^0.8.2"
 	},
 	"require-dev": {
 		"ninjify/qa": "^0.11",

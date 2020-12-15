@@ -8,6 +8,7 @@ extensions:
 	contributte.monolog: Contributte\Monolog\DI\MonologExtension
 	contributte.mailing: Contributte\Mailing\DI\MailingExtension
 	contributte.post: Contributte\Mail\DI\MailExtension
+	contributte.translation: Contributte\Translation\DI\TranslationExtension
 
 contributte.console:
 	url: http://localhost/
@@ -34,3 +35,13 @@ contributte.monolog:
 contributte.post:
 	debug: false
 	mailer: Nette\Mail\SmtpMailer(%smtp%)
+
+contributte.translation:
+    locales:
+        whitelist: [en, cs, sk]
+        default: cs
+        fallback: [cs_CZ, cs]
+    dirs:
+        - %appDir%/lang
+    localeResolvers:
+        - Contributte\Translation\LocalesResolvers\Header
