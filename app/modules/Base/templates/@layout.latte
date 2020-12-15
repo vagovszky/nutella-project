@@ -34,6 +34,15 @@
 <body>
     {block #main}
 	<div class="container">
+            
+                {snippet flashes}
+		<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}" role="alert">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span class="fa fa-{$flash->type}" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			{$flash->message}
+		</div>
+                {/snippet}
 		{include #content}
 	</div>
     {/}

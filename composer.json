@@ -42,7 +42,8 @@
 		"nettrine/migrations": "^0.7.0",
 		"nettrine/fixtures": "^0.5.1",
 		"ublaboo/datagrid": "^6.5",
-		"contributte/translation": "^0.8.2"
+		"contributte/translation": "^0.8.2",
+		"contributte/forms-bootstrap": "^0.3.2"
 	},
 	"require-dev": {
 		"ninjify/qa": "^0.11",
