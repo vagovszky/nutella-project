@@ -1,0 +1,8 @@
+sign:
+    in:
+        title: "Administrace"
+        email: "Email"
+        password: "Heslo"
+        remember: "Pamatovat si přihlášení"
+        submit: "Přihlásit se"
+        
