@@ -8,6 +8,7 @@ extensions:
 	contributte.monolog: Contributte\Monolog\DI\MonologExtension
 	contributte.mailing: Contributte\Mailing\DI\MailingExtension
 	contributte.post: Contributte\Mail\DI\MailExtension
+	contributte.translation: Contributte\Translation\DI\TranslationExtension
 
 contributte.console:
 	url: http://localhost/
@@ -30,3 +31,13 @@ contributte.monolog:
 				- Monolog\Processor\IntrospectionProcessor()
 				- Monolog\Processor\MemoryPeakUsageProcessor()
 				- Monolog\Processor\ProcessIdProcessor()
+
+contributte.translation:
+    locales:
+        whitelist: [en, cs, sk]
+        default: cs
+        fallback: [cs_CZ, cs]
+    dirs:
+        - %appDir%/lang
+    localeResolvers:
+        - Contributte\Translation\LocalesResolvers\Header

@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+    <link rel="shortcut icon" href="{$basePath}/favicon.ico">
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/happy-inputs@2.0.4/src/happy.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ublaboo-datagrid@6.2.13/assets/datagrid.css">
 
-	<!-- Seo -->
-	<title>{block #title|stripHtml|trim}Nutella{/} | Nette project</title>
+    <!-- Use this css for ajax spinners -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ublaboo-datagrid@6.2.13/assets/datagrid-spinners.css">
 
-	<!-- Meta -->
-	<meta name="description" n:ifset="#description" content="{include #description}">
-	<meta name="keywords" n:ifset="#keywords" content="{include #keywords}">
-	<meta name="robots" content="index,follow">
-	<meta name="googlebot" content="snippet,archive">
-	<meta name="author" content="f3l1x">
+    <!-- Include this css when using FilterMultiSelect (silviomoreto.github.io/bootstrap-select) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.15/dist/css/bootstrap-select.css">
 
-	{block #head}{/}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        
+    <title>{block #title|stripHtml|trim}Foto Uloženka{/} | by Jursa Foto</title>
+        
+    <meta name="description" n:ifset="#description" content="{include #description}">
+    <meta name="keywords" n:ifset="#keywords" content="{include #keywords}">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="snippet,archive">
+    <meta name="author" content="f3l1x">
+
+    {block #head}{/}
 </head>
+
 <body>
-{block #main}
+    {block #main}
 	<div class="container">
+            
+                {snippet flashes}
+		<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}" role="alert">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span class="fa fa-{$flash->type}" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			{$flash->message}
+		</div>
+                {/snippet}
 		{include #content}
 	</div>
-{/}
+    {/}
+    <script src="https://cdn.jsdelivr.net/npm/happy-inputs@2.1.0/src/nomodule-es5-fallback.js"></script>
+    <script>
+	var happy = new Happy;
+	happy.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-sortable@1.0.0/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nette.ajax.js@2.3.0/nette.ajax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ublaboo-datagrid@6.2.13/assets/datagrid.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nette-forms@3.0.4/src/assets/netteForms.min.js"></script>
+
+    <!-- It is recommended to include this JS file with just a few bits. It refreshes URL on non ajax request -->
+    <script src="https://cdn.jsdelivr.net/npm/ublaboo-datagrid@6.2.13/assets/datagrid-instant-url-refresh.js"></script>
+
+    <!-- Use this little extension for ajax spinners -->
+    <script src="https://cdn.jsdelivr.net/npm/ublaboo-datagrid@6.2.13/assets/datagrid-spinners.js"></script>
+
+    <!-- Include bootstrap-select.js when using FilterMultiSelect (silviomoreto.github.io/bootstrap-select) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.15/dist/js/bootstrap-select.js"></script>
 </body>
 </html>

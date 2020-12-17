@@ -29,6 +29,7 @@ final class SignPresenter extends BaseAdminPresenter
 	public function actionIn(): void
 	{
 		if ($this->user->isLoggedIn()) {
+                        $this->flashSuccess('_front.sign.out.success');
 			$this->redirect(App::DESTINATION_AFTER_SIGN_IN);
 		}
 	}
