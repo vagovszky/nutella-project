@@ -1,0 +1,42 @@
+extensions:
+	webloader: WebLoader\Bridges\Nette\WebLoaderExtension
+
+webloader:
+	outputDir: %wwwDir%/webtemp
+	documentRoot: %wwwDir%
+	disableCache: TRUE
+	filesCollections:
+		base:
+			cssFiles:
+				- %appDir%/assets/base/css/bootstrap.css
+				- %appDir%/assets/base/css/happy.css
+				- %appDir%/assets/base/css/bootstrap-datepicker.css
+				- %appDir%/assets/base/css/datagrid.css
+				- %appDir%/assets/base/css/datagrid-spinners.css
+				- %appDir%/assets/base/css/bootstrap-select.css
+				- %appDir%/assets/base/css/font-awesome-all.css
+			jsFiles:
+				- %appDir%/assets/base/js/nomodule-es5-fallback.js
+				- %appDir%/assets/base/js/jquery.js
+				- %appDir%/assets/base/js/bootstrap.js
+				- %appDir%/assets/base/js/bootstrap-datepicker.js
+				- %appDir%/assets/base/js/jquery-ui.min.js
+				- %appDir%/assets/base/js/nette.ajax.js
+				- %appDir%/assets/base/js/datagrid.js
+				- %appDir%/assets/base/js/netteForms.min.js
+				- %appDir%/assets/base/js/datagrid-instant-url-refresh.js
+				- %appDir%/assets/base/js/datagrid-spinners.js
+				- %appDir%/assets/base/js/bootstrap-select.js
+		admin:
+			cssFiles:
+				- %appDir%/assets/admin/css/admin.css
+			jsFiles:
+				- %appDir%/assets/admin/js/admin.js
+		front:
+			cssFiles:
+				- %appDir%/assets/front/css/front.css
+			jsFiles:
+				- %appDir%/assets/front/js/front.js
+
+
+    
