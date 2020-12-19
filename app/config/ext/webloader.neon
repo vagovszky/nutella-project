@@ -37,6 +37,9 @@ webloader:
 				- %appDir%/assets/front/css/front.css
 			jsFiles:
 				- %appDir%/assets/front/js/front.js
+		sign:
+			cssFiles:
+				- %appDir%/assets/admin/css/sign.css
 
 
     

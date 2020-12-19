@@ -15,21 +15,22 @@
     <meta name="keywords" n:ifset="#keywords" content="{include #keywords}">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="snippet,archive">
-    <meta name="author" content="f3l1x">
+    <meta name="author" content="MVa">
 
     {block #head}{/}
 </head>
 
 <body>
     {block #main}
+    
 	<div class="container">
-            
+              
                 {snippet flashes}
 		<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}" role="alert">
 			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			<span class="fa fa-{$flash->type}" aria-hidden="true"></span>
-			<span class="sr-only">Error:</span>
-			{$flash->message}
+			<span class="sr-only">Message:</span>
+			{_$flash->message}
 		</div>
                 {/snippet}
 		{include #content}
@@ -40,5 +41,7 @@
 	var happy = new Happy;
 	happy.init();
     </script>
+    
+    {block #footer}{/}
 </body>
 </html>

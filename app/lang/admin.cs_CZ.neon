@@ -5,4 +5,8 @@ sign:
         password: "Heslo"
         remember: "Pamatovat si přihlášení"
         submit: "Přihlásit se"
+        success: "Přihlášení proběhlo úspěšně"
+        error: "Chybný email nebo heslo"
+    out:
+        success: "Odhlášení proběhlo úspěšně"
         

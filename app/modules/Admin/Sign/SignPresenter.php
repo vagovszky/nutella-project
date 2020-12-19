@@ -22,14 +22,12 @@ final class SignPresenter extends BaseAdminPresenter
 	 * @param ComponentReflection|mixed $element
 	 * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint
 	 */
-	public function checkRequirements($element): void
-	{
-	}
+	public function checkRequirements($element): void {}
 
 	public function actionIn(): void
 	{
 		if ($this->user->isLoggedIn()) {
-                        $this->flashSuccess('_front.sign.out.success');
+                        $this->flashSuccess('admin.sign.in.success');
 			$this->redirect(App::DESTINATION_AFTER_SIGN_IN);
 		}
 	}
@@ -38,7 +36,7 @@ final class SignPresenter extends BaseAdminPresenter
 	{
 		if ($this->user->isLoggedIn()) {
 			$this->user->logout();
-			$this->flashSuccess('_front.sign.out.success');
+			$this->flashSuccess('admin.sign.out.success');
 		}
 
 		$this->redirect(App::DESTINATION_AFTER_SIGN_OUT);
@@ -65,11 +63,10 @@ final class SignPresenter extends BaseAdminPresenter
 			$this->user->setExpiration($form->values->remember ? '14 days' : '20 minutes');
 			$this->user->login($form->values->email, $form->values->password);
 		} catch (AuthenticationException $e) {
-			$form->addError('Invalid username or password');
-
+			$form->addError('admin.sign.in.error');
 			return;
 		}
-
+			$this->flashSuccess('admin.sign.in.success');
 		$this->redirect(App::DESTINATION_AFTER_SIGN_IN);
 	}
 

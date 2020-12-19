@@ -8,7 +8,6 @@ use Nette\Application\UI\Form;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use App\Model\Database\EntityManager;
 use Ublaboo\DataGrid\DataGrid;
-use Nette\Localization\ITranslator;
 
 final class HomePresenter extends BaseAdminPresenter {
 
@@ -16,9 +15,8 @@ final class HomePresenter extends BaseAdminPresenter {
     public $dispatcher;
     /** @var EntityManager @inject */
     public $entityManager;
-    /** @var ITranslator @inject */
-    public $translator;
-
+    
+    /*
     protected function createComponentOrderForm(): Form {
         $form = new Form();
 
@@ -32,6 +30,7 @@ final class HomePresenter extends BaseAdminPresenter {
 
         return $form;
     }
+    */
 
     public function createComponentGrid(): DataGrid {
         $grid = new DataGrid;

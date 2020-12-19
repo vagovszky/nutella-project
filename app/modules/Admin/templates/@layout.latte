@@ -2,8 +2,37 @@
 
 {block #head}
         {$webloaderFilesCollectionRender->css('admin')|noescape}
-        {$webloaderFilesCollectionRender->js('admin')|noescape}
-	<!-- <link rel="stylesheet" href="{$basePath}/assets/admin.css" defer /> -->
-	<!-- <script src="{$basePath}/assets/admin.js" defer></script> -->
 {/block}
 
+{block #main}
+<div class="d-flex" id="wrapper">
+
+    {include #sidemenu from 'sidemenu.latte'}
+
+    <div id="page-content-wrapper">
+
+        {include #navbar from 'navbar.latte'}
+
+        <div class="container-fluid">
+            
+            {snippet flashes}
+		<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}" role="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <span class="fa fa-{$flash->type}" aria-hidden="true"></span>
+                    <span class="sr-only">Message:</span>
+                    {_$flash->message}
+		</div>
+            {/snippet}
+            
+            {include #content}    
+           
+        </div>
+
+    </div>
+
+</div>
+{/block}
+
+{block #footer}
+        {$webloaderFilesCollectionRender->js('admin')|noescape}
+{/block}

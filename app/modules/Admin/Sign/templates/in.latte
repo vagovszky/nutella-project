@@ -1,28 +1,45 @@
-{block #content}
-<form n:name="loginForm" class="form-signin">
-	<div class="text-center mb-4">
-		<h1 class="h3 mb-3 font-weight-normal">{_admin.sign.in.title}</h1>
-	</div>
+{block #head}
+    {$webloaderFilesCollectionRender->css('sign')|noescape}
+{/block}
 
-	<div n:foreach="$form->errors as $error" class="alert alert-danger" role="alert">
-		{$error}
-	</div>
+{block #main}
+<div class="container">
 
-	<div class="form-label-group">
-		<input type="email" n:name="email" class="form-control" placeholder="{_admin.sign.in.email}" required autofocus>
-		<label n:name="email">{_admin.sign.in.email}</label>
-	</div>
+    {snippet flashes}
+        <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <span class="fa fa-{$flash->type}" aria-hidden="true"></span>
+            <span class="sr-only">Message:</span>
+            {_$flash->message}
+        </div>
+    {/snippet}
 
-	<div class="form-label-group">
-		<input type="password" n:name="password" class="form-control" placeholder="{_admin.sign.in.password}" required>
-		<label n:name="password">{_admin.sign.in.password}</label>
-	</div>
+    <form n:name="loginForm" class="form-signin">
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">{_admin.sign.in.title}</h1>
+        </div>
 
-	<div class="checkbox mb-3">
-		<label>
-			<input n:name="remember" type="checkbox"> {_admin.sign.in.remember}
-		</label>
-	</div>
-	<button n:name="submit" class="btn btn-lg btn-primary btn-block">{_admin.sign.in.submit}</button>
-	<p class="mt-5 mb-3 text-muted text-center">&copy; {=date('Y')}</p>
-</form>
+        <div n:foreach="$form->errors as $error" class="alert alert-danger" role="alert">
+            {_$error}
+        </div>
+
+        <div class="form-label-group">
+            <input type="email" n:name="email" class="form-control" placeholder="{_admin.sign.in.email}" required autofocus>
+            <label n:name="email">{_admin.sign.in.email}</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" n:name="password" class="form-control" placeholder="{_admin.sign.in.password}" required>
+            <label n:name="password">{_admin.sign.in.password}</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input n:name="remember" type="checkbox"> {_admin.sign.in.remember}
+            </label>
+        </div>
+        <button n:name="submit" class="btn btn-lg btn-primary btn-block">{_admin.sign.in.submit}</button>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; {=date('Y')}</p>
+    </form>
+</div>
+{/block}

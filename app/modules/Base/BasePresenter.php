@@ -9,6 +9,7 @@ use App\UI\Control\TModuleUtils;
 use Contributte\Application\UI\Presenter\StructuredTemplates;
 use Nette\Application\UI\Presenter;
 use WebLoader\Engine;
+use Nette\Localization\ITranslator;
 
 /**
  * @property-read TemplateProperty $template
@@ -24,15 +25,21 @@ abstract class BasePresenter extends Presenter {
      * @var Engine
      */
     private $webloader;
+    
+    /** @var ITranslator */
+    public $translator;
 
-    public function __construct(Engine $engine) {
+    public function __construct(Engine $engine, ITranslator $translator) {
 	$this->webloader = $engine;
+	$this->translator = $translator;
     }
 
     public function beforeRender() {
-	$this->template->setParameters([
-	    'webloaderFilesCollectionRender' => $this->webloader->getFilesCollectionRender()
-	]);
+	
+	parent::beforeRender();
+	
+	$this->template->add('webloaderFilesCollectionRender', $this->webloader->getFilesCollectionRender());
+
     }
 
 }
