@@ -43,7 +43,8 @@ services:
 	# Console ================
 	- {class: App\Model\Console\HelloCommand, tags: {console.command: hello}}
 
-
+	# Controls ================
+	- App\UI\Control\DataGrid\UserDataGrid\UserDataGridFactoryInterface
 
 latte:
 	macros:

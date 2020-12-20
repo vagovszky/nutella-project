@@ -7,6 +7,11 @@ sign:
         submit: "Přihlásit se"
         success: "Přihlášení proběhlo úspěšně"
         error: "Chybný email nebo heslo"
-    out:
-        success: "Odhlášení proběhlo úspěšně"
+        logout: "Odhlášení proběhlo úspěšně"
+home:
+    default:
+        heading: "Nástěnka"
+user:
+    default:
+        heading: "Uživatelé"
         

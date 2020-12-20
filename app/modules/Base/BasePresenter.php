@@ -10,6 +10,7 @@ use Contributte\Application\UI\Presenter\StructuredTemplates;
 use Nette\Application\UI\Presenter;
 use WebLoader\Engine;
 use Nette\Localization\ITranslator;
+use App\Model\App;
 
 /**
  * @property-read TemplateProperty $template
@@ -39,6 +40,7 @@ abstract class BasePresenter extends Presenter {
 	parent::beforeRender();
 	
 	$this->template->add('webloaderFilesCollectionRender', $this->webloader->getFilesCollectionRender());
+	$this->template->add('version', App::APP_VERSION);
 
     }
 

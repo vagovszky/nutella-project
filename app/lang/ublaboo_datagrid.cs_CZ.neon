@@ -1,0 +1,5 @@
+all: "Vše"
+items: "Položky"
+from: "z"
+reset_filter: "Zrušit filtr"
+per_page_submit: "Odeslat"

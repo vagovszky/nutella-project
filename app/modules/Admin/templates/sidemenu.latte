@@ -1,13 +1,10 @@
 {define #sidemenu}
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading">{_sidemenu.title}</div>
+    {dump $presenter->isLinkCurrent('Home:default')}
     <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        <a n:href='Home:default' class="list-group-item list-group-item-action {$presenter->isLinkCurrent('Home:default') ? 'active', 'bg-light'}">{_sidemenu.items.home}</a>
+        <a n:href='User:default' class="list-group-item list-group-item-action {$presenter->isLinkCurrent('User:default') ? 'active', 'bg-light'}">{_sidemenu.items.user}</a>
     </div>
 </div>
 {/define}

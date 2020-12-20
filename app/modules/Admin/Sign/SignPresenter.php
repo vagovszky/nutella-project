@@ -36,7 +36,7 @@ final class SignPresenter extends BaseAdminPresenter
 	{
 		if ($this->user->isLoggedIn()) {
 			$this->user->logout();
-			$this->flashSuccess('admin.sign.out.success');
+			$this->flashSuccess('admin.sign.in.logout');
 		}
 
 		$this->redirect(App::DESTINATION_AFTER_SIGN_OUT);
