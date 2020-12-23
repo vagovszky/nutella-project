@@ -2,11 +2,12 @@
 
 namespace App\UI\Form;
 
-use Nette\Application\UI\Form;
-use Nette\Forms\Controls\TextInput;
+use Contributte\FormsBootstrap\BootstrapForm;
+use Contributte\FormsBootstrap\Inputs\TextInput;
 
-class BaseForm extends Form
+class BaseForm extends BootstrapForm
 {
+
 
 	public function addFloat(string $name, ?string $label = null): TextInput
 	{

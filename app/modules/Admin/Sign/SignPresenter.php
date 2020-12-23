@@ -45,13 +45,14 @@ final class SignPresenter extends BaseAdminPresenter
 	protected function createComponentLoginForm(): BaseForm
 	{
 		$form = $this->formFactory->forBackend();
-		$form->addEmail('email')
+		
+		$form->addEmail('email', 'admin.sign.in.email')
 			->setRequired(true);
-		$form->addPassword('password')
+		$form->addPassword('password', 'admin.sign.in.password')
 			->setRequired(true);
-		$form->addCheckbox('remember')
+		$form->addCheckbox('remember', 'admin.sign.in.remember')
 			->setDefaultValue(true);
-		$form->addSubmit('submit');
+		$form->addSubmit('submit', 'admin.sign.in.submit');
 		$form->onSuccess[] = [$this, 'processLoginForm'];
 
 		return $form;

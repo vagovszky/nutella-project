@@ -3,3 +3,28 @@ surname: "Příjmení"
 email: "Email"
 username: "Uživatelské jméno"
 role: "Role"
+forms:
+    equal: 'Zadejte %s.'
+    not_equal: 'Tato hodnota by neměla být %s.'
+    filled: 'Toto pole je povinné.'
+    blank: 'Toto pole by mělo být prázdné.'
+    min_length: 'Zadejte prosím alespoň %d znaků.'
+    max_length: 'Zadejte prosím maximálně %d znaků.'
+    length: 'Zadejte prosím hodnotu %d až %d znaků dlouho.'
+    email: 'Zadejte platnou e-mailovou adresu.'
+    url: 'Zadejte prosím platné URL.'
+    integer: 'Zadejte platné celé číslo.'
+    float: 'Zadejte platné číslo.'
+    min: 'Zadejte prosím hodnotu větší nebo rovnou %d.'
+    max: 'Zadejte prosím hodnotu menší nebo rovnou %d.'
+    range: 'Zadejte hodnotu mezi %d a %d.'
+    max_file_size: 'Velikost nahraného souboru může být nejvýše %d bytů.'
+    max_post_size: 'Nahraná data překračují limit %d bytů.'
+    forms.mime_type: 'Nahraný soubor není v očekávaném formátu.'
+    image: 'Nahraný soubor musí být obraz ve formátu JPEG, GIF, PNG nebo WebP.'
+    selectbox:
+        valid: 'Vyberte prosím platnou možnost.'
+    uploadcontrol:
+        valid: 'Při nahrávání souboru došlo k chybě.'
+    csrf:
+        protection: 'Vaše relace vypršela. Vraťte se na domovskou stránku a zkuste to znovu.'

@@ -48,3 +48,27 @@ tracy:
 	email: %system.error.email%
 	logSeverity: E_ALL
 	strictMode: yes
+
+forms:
+	messages:
+		EQUAL: 'messages.forms.equal'
+		NOT_EQUAL: 'messages.forms.not_equal'
+		FILLED: 'messages.forms.filled'
+		BLANK: 'messages.forms.blank'
+		MIN_LENGTH: 'messages.forms.min_length'
+		MAX_LENGTH: 'messages.forms.max_length'
+		LENGTH: 'messages.forms.length'
+		EMAIL: 'messages.forms.email'
+		URL: 'messages.forms.url'
+		INTEGER: 'messages.forms.integer'
+		FLOAT: 'messages.forms.float'
+		MIN: 'messages.forms.min'
+		MAX: 'messages.forms.max'
+		RANGE: 'messages.forms.range'
+		MAX_FILE_SIZE: 'messages.forms.max_file_size'
+		MAX_POST_SIZE: 'messages.forms.max_post_size'
+		MIME_TYPE: 'messages.forms.mime_type'
+		IMAGE: 'messages.forms.image'
+		Nette\Forms\Controls\SelectBox::VALID: 'messages.forms.selectbox.valid'
+		Nette\Forms\Controls\UploadControl::VALID: 'messages.forms.uploadcontrol.valid'
+		Nette\Forms\Controls\CsrfProtection::PROTECTION: 'messages.forms.csrf.protection'

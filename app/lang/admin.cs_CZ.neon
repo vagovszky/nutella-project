@@ -14,4 +14,7 @@ home:
 user:
     default:
         heading: "Uživatelé"
+import:
+    default:
+        heading: "Import zakázek"
         
