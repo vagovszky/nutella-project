@@ -23,10 +23,10 @@ webloader:
 				- %appDir%/assets/base/js/jquery-ui.min.js
 				- %appDir%/assets/base/js/nette.ajax.js
 				- %appDir%/assets/base/js/datagrid.js
+				- %appDir%/assets/base/js/live-form-validation.js
 				- %appDir%/assets/base/js/datagrid-instant-url-refresh.js
 				- %appDir%/assets/base/js/datagrid-spinners.js
 				- %appDir%/assets/base/js/bootstrap-select.js
-				- %appDir%/assets/base/js/live-form-validation.js
 		admin:
 			cssFiles:
 				- %appDir%/assets/admin/css/admin.css

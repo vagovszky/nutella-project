@@ -5,17 +5,13 @@ parameters:
 	# System
 	system:
 		error:
-			email: dev@contributte.org
+			email: vagovszky@gmail.com
 			presenter: Front:Error
 
 	# Database
 	database:
 		driver: pdo_pgsql
 		port: 5432
-
-	# Project
-	project:
-		rev: "1.0.0"
 
 	# File
 	files:

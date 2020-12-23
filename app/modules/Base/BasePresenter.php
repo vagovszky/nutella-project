@@ -29,6 +29,9 @@ abstract class BasePresenter extends Presenter {
     
     /** @var ITranslator */
     public $translator;
+    
+    /** @persistent */
+    public $locale;
 
     public function __construct(Engine $engine, ITranslator $translator) {
 	$this->webloader = $engine;

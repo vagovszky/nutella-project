@@ -40,4 +40,4 @@ contributte.translation:
     dirs:
         - %appDir%/lang
     localeResolvers:
-        - Contributte\Translation\LocalesResolvers\Header
+        - Contributte\Translation\LocalesResolvers\Router

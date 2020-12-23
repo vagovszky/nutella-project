@@ -21,7 +21,7 @@ final class RouterFactory
 	protected function buildAdmin(RouteList $router): RouteList
 	{
 		$router[] = $list = new RouteList('Admin');
-		$list[] = new Route('admin/<presenter>/<action>[/<id>]', 'Home:default');
+		$list[] = new Route('[<locale=cs cs|en>/]admin/<presenter>/<action>[/<id>]', 'Home:default');
 
 		return $router;
 	}
@@ -29,7 +29,7 @@ final class RouterFactory
 	protected function buildFront(RouteList $router): RouteList
 	{
 		$router[] = $list = new RouteList('Front');
-		$list[] = new Route('<presenter>/<action>[/<id>]', 'Home:default');
+		$list[] = new Route('[<locale=cs cs|en>/]<presenter>/<action>[/<id>]', 'Home:default');
 
 		return $router;
 	}
